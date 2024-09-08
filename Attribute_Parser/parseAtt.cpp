@@ -65,7 +65,6 @@ int main() {
             cout<<tag_list[tag_head][value_part]<<endl;
         }
     }
-    // ... rest of your code ...
 
     return 0;
 }
