@@ -9,7 +9,6 @@ if "%~1"=="" (
 :: Extract file details
 set "input_file=%~1"
 set "base_name=%~n1"
-echo %base_name%
 :: Check if the file exists
 if not exist "%input_file%" (
     echo File %input_file% not found!
@@ -28,9 +27,12 @@ if errorlevel 1 (
     echo Compilation failed!
     exit /b 1
 )
+echo.
+echo Compilation successful. Running the program...
+echo ---------------------------------------------
+echo.
 
 .\main.exe
 :: If compilation succeeds, run the executable
-echo Compilation successful. Running the program...
-echo ---------------------------------------------
-
+echo.
+echo Compilation successfully ended. 
